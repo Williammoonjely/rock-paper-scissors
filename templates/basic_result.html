@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div>
+        <h1>player choise<br><button><img src="../static/{{player}}.jpg" alt=""></button></h1>
+        <h1>computer choise<br><button><img src="../static/{{computer}}.jpg" alt=""></button></h1>
+    </div>
+    {% if winner == 'tie' %}
+        <h1>Its a TIE!</h1>
+    {% elif winner == 'computer' %}
+        <h1>The winner is Computer</h1>
+    {% else %}
+        <h1>The winner is Player</h1>
+    {% endif %}
+    <a href="{{url_for('basic')}}"><button><h1>Play Again</h1></button></a>
+    <a href="{{url_for('index')}}"><button><h1>New Game</h1></button></a>
+</body>
+</html>
